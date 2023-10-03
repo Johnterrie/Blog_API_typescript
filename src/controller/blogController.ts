@@ -16,19 +16,4 @@ const CreatedUserAccount = async (req: Request, res: Response) => {
 
     const { username, password }: Body = req.body
 
-    const { error } = schema(req.body);
-
-    if (error) {
-        return res.status(STATUS_CODES.BAD_REQUEST).json({
-            message: error,
-        })
-    }
-
-    try {
-        const userExist = await Blog.findOne({ username })
-    } catch (error) {
-        
-    }
-
-
 }
