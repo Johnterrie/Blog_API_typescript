@@ -14,6 +14,6 @@ interface Body {
 
 const CreatedUserAccount = async (req: Request, res: Response) => {
 
-    const { username, password }: Body = req.body
+    const { username, password } = req.body as Body
 
 }
